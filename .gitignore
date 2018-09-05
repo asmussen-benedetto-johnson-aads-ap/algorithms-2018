@@ -2,7 +2,7 @@
 *.toc
 *.log
 *.lot
-*.bfc
+*.bcf
 *.out
 *.pdf
 *.run.xml
