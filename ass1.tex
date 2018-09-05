@@ -1,4 +1,4 @@
-\documentclass[a4paper,10pt,twocolumn,notitlepage]{report}
+\documentclass[a4paper,10pt,onecolumn,notitlepage]{report}
 
 \input{packages.tex}
 \input{setup.tex}
@@ -10,4 +10,18 @@
 
 \begin{document}
 \maketitle
+\begingroup
+\let\clearpage\relax
+\tableofcontents
+\endgroup
+\twocolumn
+
+\section{Exercise 1: $b$-flow}
+
+\input{ass1-1.tex}
+
+\section{Exercise 2: An application of MCFP: rectilinear planar embedding}
+
+\input{ass1-2.tex}
+
 \end{document}
