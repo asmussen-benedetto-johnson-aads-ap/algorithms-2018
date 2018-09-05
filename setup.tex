@@ -1,5 +1,12 @@
-\inputencoding{utf8}
 \selectlanguage{english}
-\geometry{a4paper, portrait, margin=25mm, headheight=30mm}
+\geometry{a4paper, portrait, hmargin={20mm,20mm}, vmargin={35mm,20mm}, headheight=46pt}
 
+\isodash{--}
+\isodate
+\date{\today}
+
+\pagestyle{fancyplain}
 \fancyhf{}
+\fancyhf[HR]{\begin{minipage}{0.35\textwidth} \thetitle \\ \theauthor \end{minipage}}
+\fancyhf[FL]{\today}
+\fancyhf[FR]{\thepage\ of \pageref{LastPage}}
