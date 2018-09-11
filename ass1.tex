@@ -31,6 +31,7 @@
 
 %last because technical reasons
 \usepackage{hyperref}
+\usepackage{memhfixc}
 
 %%%%%%%%%%%%%
 %%% SETUP %%%
@@ -84,6 +85,18 @@
 \makeoddfoot{fancy}{\thedate}{}{\thepage\ of \thelastpage}
 \pagestyle{fancy}
 
+\copypagestyle{chapter}{fancy}
+\copypagestyle{title}{fancy}
+
+%pagestyles:
+%book
+%chapter
+%cleared
+%epigraph
+%title
+%part
+%titlingpage
+
 %no section numbering
 \setsecnumdepth{chapter}
 
@@ -101,8 +114,9 @@
 \newcommand\thecourse{Advanced Programming 2018\\CPH Univ. CS Dept.}
 
 \begin{document}
+\mainmatter
+
 \maketitle
-\thispagestyle{fancy}
 \tableofcontents
 \twocolumn
 
@@ -114,11 +128,12 @@
 
 \input{ass1-A.tex}
 
-\phantomsection%
-\addcontentsline{toc}{section}{References, Lists \& Indexes}%
+\backmatter
+\pagestyle{fancy}
+
 \printbibliography%
-\ifnum\value{figure}>0\listoffigures\fi%
-\ifnum\value{table}>0\listoftables\fi%
+\listoffigures
+%\listoftables
 \printindex%
 
 \end{document}

@@ -1,1 +1,31 @@
 \section{Exercise 1: $b$-flow}
+
+\begin{figure*}
+\begin{minipage}{0.5\textwidth}
+  \begin{center}
+    \begin{tikzcd}
+      v_1 \; (3) \arrow[dd, "4"'] \arrow[rddd, swap, "6", bend right=80] &  & v_2 \; (-2) \arrow[ll, "5"'] \arrow[dd, "2"] \arrow[lddd, swap, "3"', bend left=80] \\
+      &  &  \\
+      v_3 \; (4) \arrow[rruu, pos=0.7, "4"] \arrow[rd, "7"] &  & v_4 \; (2) \arrow[lluu, pos=0.7, "1"] \arrow[ld, "2"'] \\
+      & v_5 \; (-7) & 
+    \end{tikzcd}
+
+    \vspace{1em}
+
+    \textbf{(a)}
+  \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+  \begin{center}
+    \begin{tikzcd}
+      v_1 \; (3) \arrow[d, "4"'] & v_2 \; (1) \arrow[d, "6"] \arrow[l, "3"'] \\
+      v_3 \; (-2) \arrow[r, "3"'] \arrow[ru, "2"'] & v_4 \; (-2)
+    \end{tikzcd}
+    
+    \vspace{1em}
+
+    \textbf{(b)}
+  \end{center}
+\end{minipage}
+  \caption{Graphs with capacities and demands, taken from assignment set.}
+\end{figure*}
