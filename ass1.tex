@@ -1,4 +1,4 @@
-\documentclass[report,a4paper,report,10pt,onecolumn,notitlepage]{memoir}
+\documentclass[a4paper,article,10pt,onecolumn,oneside]{memoir}
 
 %%%%%%%%%%%%%%%%
 %%% PACKAGES %%%
@@ -27,6 +27,7 @@
 
 %bibtex
 \usepackage[backend=biber]{biblatex}
+\addbibresource{ass1.bib}
 
 %last because technical reasons
 \usepackage{hyperref}
@@ -79,15 +80,16 @@
 \setlength{\headheight}{45pt}
 \nouppercaseheads
 \makepagestyle{fancy}
-\makeoddhead{fancy}{}{}{\begin{minipage}{0.25\textwidth}\thetitle\\\theauthor\\\thecourse\end{minipage}}
+\makeoddhead{fancy}{}{}{\begin{minipage}{0.35\textwidth}\thetitle\\\theauthor\end{minipage}}
 \makeoddfoot{fancy}{\thedate}{}{\thepage\ of \thelastpage}
 \pagestyle{fancy}
 
+%no section numbering
 \setsecnumdepth{chapter}
 
+%spacing
 \setlength\parindent{0pt}
 \setlength\parskip{0.5em}
-
 %\titlespacing*{\section}{0pt}{1\baselineskip}{1\baselineskip}
 %\titlespacing*{\subsection}{0pt}{0.5\baselineskip}{0.5\baselineskip}
 %\titlespacing*{\subsubsection}{0pt}{0.25\baselineskip}{0.25\baselineskip}
@@ -104,12 +106,19 @@
 \tableofcontents
 \twocolumn
 
-\section{Exercise 1: $b$-flow}
 
 \input{ass1-1.tex}
-
-\section{Exercise 2: An application of MCFP: rectilinear planar embedding}
-
 \input{ass1-2.tex}
+
+\appendix
+
+\input{ass1-A.tex}
+
+\phantomsection%
+\addcontentsline{toc}{section}{References, Lists \& Indexes}%
+\printbibliography%
+\ifnum\value{figure}>0\listoffigures\fi%
+\ifnum\value{table}>0\listoftables\fi%
+\printindex%
 
 \end{document}
