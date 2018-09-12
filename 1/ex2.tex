@@ -1,3 +1,61 @@
 \section{Exercise 2: An application of MCFP: rectilinear planar embedding}
 
+\begin{figure*}
+
+\end{figure*}
+
+\subsection{Exercise 2.1}
+
+Listing only the values of $z_{fg}$ where $f$ and $g$ share an edge,
+and on the values of $x_{vf}$ where $v$ is a corner edge of $f$.
+\begingroup
+\newcommand\zfg[3]{z_{ #1 #2} = #3}
+\newcommand\xvf[3]{x_{ #1 #2} = #3}
+\begin{align*}
+  \zfg a b 0 \\
+  \zfg a c 0 \\
+  \zfg a e 0 \\
+  \hrule
+  \zfg b a 2 \\
+  \zfg b c 1 \\
+  \zfg b d 1 \\
+  \hrule
+  \zfg c a 1 \\
+  \zfg c b 1 \\
+  \zfg c d 0 \\
+  \hrule
+  \zfg d b 1 \\
+  \zfg d c 0 \\
+  \zfg d e 2 \\
+  \hrule
+  \zfg e a 4 \\
+  \zfg e d 0 \\
+  \hrule
+  \xvf a 1 0 \\
+  \xvf a 3 1 \\
+  \xvf a 5 1 \\
+  \xvf a 7 0 \\
+  \xvf a 6 1 \\
+  \hrule
+  \xvf b 1 1 \\
+  \xvf b 2 0 \\
+  \xvf b 6 1 \\
+  \hrule
+  \xvf c 1 1 \\
+  \xvf c 2 1 \\
+  \xvf c 3 1 \\
+  \hrule
+  \xvf d 2 1 \\
+  \xvf d 3 1 \\
+  \xvf d 4 {-1} \\
+  \xvf d 6 1 \\
+  \hrule
+  \xvf e 3 1 \\
+  \xvf e 4 1 \\
+  \xvf e 5 {-1} \\
+  \xvf e 6 1 \\
+  \xvf e 7 0
+\end{align*}
+\endgroup
+
 
