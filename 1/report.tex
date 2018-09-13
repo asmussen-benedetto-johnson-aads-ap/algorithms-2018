@@ -1,4 +1,4 @@
-\documentclass[a4paper,article,10pt,onecolumn,oneside]{memoir}
+\documentclass[a4paper,article,10pt,notitlepage,twocolumn,oneside]{memoir}
 
 %%%%%%%%%%%%%%%%
 %%% PACKAGES %%%
@@ -109,8 +109,8 @@
 \mainmatter
 
 \maketitle
-\tableofcontents
-\twocolumn
+%\tableofcontents
+%\twocolumn
 
 \input{ex1.tex}
 
@@ -118,16 +118,16 @@
 
 \input{ex3.tex}
 
-\appendix
+%\appendix
+ 
+%\input{apdx1.tex}
+ 
+%\backmatter
+%\pagestyle{fancy}
 
-\input{apdx1.tex}
-
-\backmatter
-\pagestyle{fancy}
-
-\printbibliography%
-\listoffigures
+%\printbibliography%
+%\listoffigures
 %\listoftables
-\printindex%
+%\printindex%
 
 \end{document}

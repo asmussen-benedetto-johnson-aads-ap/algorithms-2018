@@ -15,9 +15,11 @@
 
 Listing only the values of $z_{fg}$ where $f$ and $g$ share an edge,
 and on the values of $x_{vf}$ where $v$ is a corner edge of $f$.
+
 \begingroup
 \newcommand\zfg[3]{z_{ #1 #2} &= #3}
 \newcommand\xvf[3]{x_{ #1 #2} &= #3}
+\begin{minipage}{0.45\columnwidth}
 \begin{align*}
   \zfg a b 0 \\
   \zfg a c 0 \\
@@ -34,6 +36,8 @@ and on the values of $x_{vf}$ where $v$ is a corner edge of $f$.
   \zfg e a 4 \\
   \zfg e d 0
 \end{align*}
+\end{minipage}
+\begin{minipage}{0.45\columnwidth}
 \begin{align*}
   \xvf a 1 0 \\
   \xvf a 3 1 \\
@@ -56,7 +60,9 @@ and on the values of $x_{vf}$ where $v$ is a corner edge of $f$.
   \xvf e 6 1 \\
   \xvf e 7 0
 \end{align*}
+\end{minipage}
 \endgroup
+
 (A/N: This should \emph{probably} have been a table. Sorry.)
 
 See Figure~\ref{fig:rect-emb} for the rectilinear embedding.
@@ -193,7 +199,7 @@ and because we are proud of our work.
 \subsubsection{REBM $\to$ LP $\leftrightarrow$ MCFP}
 
 Perhaps it is possible to convert both problems to LP, use the
-LP-MCPF as a template to convert LP-REBM into a similar form, LP-REMB\textprime
+LP-MCPF as a template to convert LP-REBM into a similar form, LP-REMB$\prime$
 and then turn that into an instance of MCPF.
 
 MCFP is formulable as a canonical LP problem as follows:
@@ -257,6 +263,8 @@ two vertices $E = \{ (v_a, v_b), (v_b, v_a), \dots \}$ if their corresponding
 boundary cycles share an edge, then we can create a flow between vertices,
 corresponding to the number of inner turns a boundary cycle 'pushes' into another cycle,
 $f(v_a, v_b) = z_{ab}$.
+
+(Note: the usual methods of eliminating antiparallel edges are applicable.)
 
 It can then be shown that there needs to exist edges from the source $s$ to each
 vertex $v_b$ that corresponds to an inner boundary cycle, and an edge to the

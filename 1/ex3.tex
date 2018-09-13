@@ -1,1 +1,30 @@
 \section{Exercise 3: Reduction to MCFP}
+
+\subsection{Exercise 3.1}
+
+Given an instance $I_0$ of GMCFP, where some or
+all of the edges $e$ have $l_e = -\infty, u_e = \infty$, we can
+simply apply a ``modified'' version of the exponential function to
+all numerical values in $I_0$:
+\begin{align}
+  \brm{exp}(x) = \begin{cases}
+    e^x & \text{if $x$ is finite} \\
+    \lim_{y\to x} e^y & \text{otherwise.}
+  \end{cases}
+\end{align}
+This function has an obvious inverse, constructible using the natural logarithm.
+
+The exponential function is an isomorphic map between the abelian groups of addition
+over real numbers, and multiplication over strictly positive real numbers.
+
+\subsection{Exercise 3.2}
+
+See above.
+
+\subsection{Exercise 3.3}
+
+See above.
+
+\subsection{Exercise 3.4}
+
+It has exactly the same number of edges as we are only modifying the numerical values.
