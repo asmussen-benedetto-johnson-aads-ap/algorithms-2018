@@ -7,7 +7,7 @@ all of the edges $e$ have $l_e = -\infty, u_e = \infty$, we can
 simply apply a ``modified'' version of the exponential function to
 all numerical values in $I_0$:
 \begin{align}
-  \brm{exp}(x) = \begin{cases}
+  \brm{exp}'(x) = \begin{cases}
     e^x & \text{if $x$ is finite} \\
     \lim_{y\to x} e^y & \text{otherwise.}
   \end{cases}
@@ -15,16 +15,39 @@ all numerical values in $I_0$:
 This function has an obvious inverse, constructible using the natural logarithm.
 
 The exponential function is an isomorphic map between the abelian groups of addition
-over real numbers, and multiplication over strictly positive real numbers.
+over real numbers, and multiplication over strictly positive real numbers --- the inverse
+is of course, the natural lograrithm.
+\begin{align}
+  \brm{log}'(x) = \begin{cases}
+    \mathrm{ln} x & \text{if $x$ is finite} \\
+    \lim_{y\to x} \mathrm{ln} y & \text{otherwise.}
+  \end{cases}
+\end{align}
+
+The exponential function and natural logarithm are also monotonic, meaning they
+preserves minimum, maximum, and all inequalities; and assuming strictly positive costs, multiplying
+flow by cost is also a monotonic operation, meaning any solution to $I_1$ is also a solution to $I_0$.
 
 \subsection{Exercise 3.2}
 
-See above.
+$I_2 = I_1$, see above, and not that every $l_e$ is not just finite, but also positive or zero, as
+we simply map the domain of $l_e$ through the modified exponential to find the range:
+$\brm{exp}'(\{-\infty\}\cup \mathbb R) = [0;\infty).$
 
 \subsection{Exercise 3.3}
 
-See above.
+Given an instance of GMCFP, $I_2$ where all $l_e$ are positive or zero, we can
+adjust the values of $l_e$, $u_e$, $f_e$ and $d$ with addition --- which is
+isomorphic and monotonic, and therefore solution-preserving.
+
+First, we simply subtract $l_e$ from each $l_e$, $u_e$, and $f_e$ in $I_3$, giving us the
+desired property that $l_e = 0$.
+
+Second, we run a maximum flow solver on the graph in $I_2$, using $l_e$ as the capacity. This
+gives us the number $d'$ needed to subtract from the demand in $I_3$ in order to ensure we are still
+solving for the same demand.
 
 \subsection{Exercise 3.4}
 
-It has exactly the same number of edges as we are only modifying the numerical values.
+Each step has exactly the same number of edges as we are only modifying the numerical values; at
+no point do we add or remove edges or vertices.
