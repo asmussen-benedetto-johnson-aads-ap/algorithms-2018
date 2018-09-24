@@ -25,6 +25,13 @@
 \usepackage{bm}
 \usepackage{listings}
 
+%formatting
+\usepackage{ulem}
+\usepackage{contour}
+
+\renewcommand\ULdepth{1.2pt}
+\newcommand\undernice[1]{\uline{\phantom{#1}}\llap{\contour{white}{#1}}}
+
 %bibtex
 \usepackage[backend=biber]{biblatex}
 \addbibresource{ass1.bib}
@@ -103,7 +110,7 @@
 \title{Minimum Cost Flow \\ Assignment 1, AADS 2018 CSICU}
 \author{Karl D. Asmussen, Torvald A. Johnson \\
 \texttt{twk181}, \texttt{bwq210}}
-\newcommand\thecourse{Advanced Programming 2018\\CPH Univ. CS Dept.}
+\newcommand\thecourse{Advanced Algorithms 2018\\CPH Univ. CS Dept.}
 
 \begin{document}
 \mainmatter
@@ -112,11 +119,13 @@
 %\tableofcontents
 %\twocolumn
 
+\input{feedback.tex}
+
 \input{ex1.tex}
 
 \input{ex2.tex}
 
-\input{ex3.tex}
+\input{ex3-re.tex}
 
 %\appendix
  
